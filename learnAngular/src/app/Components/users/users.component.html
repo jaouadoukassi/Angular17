@@ -1,0 +1,13 @@
+<section>
+    @if (isLoggedIn) {
+    <h1>Hello {{name}} From Users Component </h1>
+    <img  (mouseenter)="greet()" alt="photo" src="https://github.com/jaouadoukassi.png"  />
+        <h3>My favorite Games</h3>
+    } @else{
+    <p>Inicia Session</p>
+    <button (click)="isLoggedIn = true">Click Here</button>
+    }
+
+    <app-games  username="{{name}}"></app-games>
+</section>
+
